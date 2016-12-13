@@ -42,7 +42,7 @@ export class Ng2Select extends SelectAccessor {
 
     @ViewChild(Ng2Dropdown) public dropdown;
 
-    public getSelectedValue(): any {
+    public getSelectedVal(): any {
         if (this.multiple && this.value.length === 1) {
             return this.selectedDisplayValue(this.value[0]);
         } else {
@@ -63,7 +63,7 @@ export class Ng2Select extends SelectAccessor {
         if (this.multiple && this.value.length > 1) {
             return `${this.value.length} items selected`;
         } else {
-            return this.getSelectedValue() || this.placeholder;
+            return this.getSelectedVal() || this.placeholder;
         }
     }
 

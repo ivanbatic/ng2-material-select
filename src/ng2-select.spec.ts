@@ -53,7 +53,7 @@ describe('Ng2Select', () => {
 
         it('has undefined value', fakeAsync(() => {
             component = getComponent(fixture);
-            expect(component.getSelectedValue()).toEqual(undefined);
+            expect(component.getSelectedVal()).toEqual(undefined);
         }));
 
         it('populated items with 2 options', fakeAsync(() => {
@@ -66,7 +66,7 @@ describe('Ng2Select', () => {
             component = getComponent(fixture);
             const item = component.dropdown.menu.items.first;
             component.dropdown.state.onItemClicked.emit(item);
-            expect(component.getSelectedValue()).toEqual('Typescript');
+            expect(component.getSelectedVal()).toEqual('Typescript');
         }));
     });
 
